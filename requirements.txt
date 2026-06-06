@@ -1,0 +1,9 @@
+Flask
+PyYAML
+Pillow
+requests
+torch
+torchvision
+gdown
+google-generativeai
+gunicorn

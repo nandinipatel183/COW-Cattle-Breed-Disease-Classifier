@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breed Prediction | Nandu Cowshala</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to right, #fff0f5, #f8f8f0); /* Pink cream background */
+            color: #2c3e50;
+        }
+
+        /* Prediction Container */
+        .prediction-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .prediction-container h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            text-align: center; /* Center the heading */
+        }
+
+        .prediction-result {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            color: #2c3e50;
+            text-align: center; /* Center the prediction */
+        }
+
+        /* Breed Analysis */
+        .breed-analysis {
+            margin-top: 30px;
+        }
+
+        .breed-analysis h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #d11186; /* Pink heading color */
+            margin-bottom: 10px;
+            text-align: center; /* Center the heading */
+        }
+
+        .breed-analysis p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center; /* Center the analysis */
+        }
+
+        .highlight {
+            color: #d11186;
+            font-weight: bold;
+        }
+
+        .breed-analysis h4 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 15px;
+            color: #d11186; /* Pink heading color */
+            text-align: center; /* Center the heading */
+        }
+
+        .breed-analysis ul {
+            list-style: none;
+            padding-left: 15px;
+            text-align: center; /* Center the list */
+        }
+
+        .breed-analysis ul li {
+            font-size: 16px;
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+            color: #555;
+        }
+
+        .breed-analysis ul li::before {
+            content: "✔";
+            color: #d11186; /* Pink checkmark */
+            position: absolute;
+            left: 0;
+        }
+
+        .breed-analysis strong {
+            font-weight: bold;
+            color: #d11186; /* Pink bold text */
+        }
+    </style>
+</head>
+<body>
+    <div class="prediction-container">
+        <h2><strong>Breed Prediction Result</strong></h2>
+        <div class="prediction-result">
+            <p><strong>Predicted Breed:</strong>
+                {% if prediction %}
+                    {{ prediction }}
+                {% else %}
+                    Prediction Unavailable.
+                {% endif %}
+            </p>
+        </div>
+
+        <div class="breed-analysis">
+            <h3><strong>Breed Analysis & Recommendations</strong></h3>
+            <p><strong>Analysis:</strong> Based on the uploaded image, Nandu Cowshala predicts the breed to be:
+                <span class="highlight">
+                    {% if prediction %}
+                        {{ prediction }}
+                    {% else %}
+                        Under Review
+                    {% endif %}
+                </span>.
+            </p>
+
+            <h4><strong>Breed Characteristics and Regions:</strong></h4>
+            <ul>
+                {% if breed_info %}
+                    {% for item in breed_info %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                {% else %}
+                    <li>Characteristics and regions not available.</li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
