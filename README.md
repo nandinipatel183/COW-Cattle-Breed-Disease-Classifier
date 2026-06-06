@@ -1,9 +1,5 @@
 #  COWशाला – AI-Powered Cattle Breed & Disease Classifier
 
-COWशाला is an intelligent livestock assistance platform that leverages Deep Learning, Computer Vision, and Generative AI to identify cattle breeds and predict diseases from images. Designed for farmers, veterinarians, researchers, and livestock organizations, the platform provides accurate image-based analysis along with AI-generated insights to support better cattle management and healthcare decisions.
-
-The system combines PyTorch-powered image classification models with Google's Gemini AI to deliver breed-specific information, regional distribution details, and disease-related guidance through an intuitive web interface and REST API.
-
 ## 🎥 Project Demo
 
 Experience COWशाला in action through the complete project demonstration:
@@ -11,6 +7,18 @@ Experience COWशाला in action through the complete project demonstration:
 [![Watch Demo](https://img.shields.io/badge/YouTube-Watch%20Demo-red?logo=youtube)](https://youtu.be/ZfX2bvciOsc?si=5xV7ukxCChyAtsft)
 
 🔗 **Demo Video:** https://youtu.be/ZfX2bvciOsc?si=5xV7ukxCChyAtsft
+
+### Demo Highlights
+- 🐂 AI-Based Cattle Breed Identification
+- 🩺 Cattle Disease Prediction
+- 🤖 Gemini AI Breed Insights
+- 📷 Image Upload & URL-Based Classification
+- 📊 Confidence-Based Predictions
+- 🌐 Flask Web Application Interface
+
+COWशाला is an intelligent livestock assistance platform that leverages Deep Learning, Computer Vision, and Generative AI to identify cattle breeds and predict diseases from images. Designed for farmers, veterinarians, researchers, and livestock organizations, the platform provides accurate image-based analysis along with AI-generated insights to support better cattle management and healthcare decisions.
+
+The system combines PyTorch-powered image classification models with Google's Gemini AI to deliver breed-specific information, regional distribution details, and disease-related guidance through an intuitive web interface and REST API.
 
 ### Demo Highlights
 - 🐂 AI-Based Cattle Breed Identification
